@@ -9,9 +9,14 @@
     <%- include('partials/nav.ejs') %>
   <h1>Full Menu</h1>
   <ul>
-    <% menu.forEach((menu) => { %>
-     <li> Name:<%= menu.name%> Price:$<%= menu.price%> Rating:<%= menu.rating%> Details:<%= menu.details%></li>
+    <% menu.forEach((item) => { %>
+        <li>
+            <h2><%= item.name %></h2>
+            <p><strong>Price:</strong> $<%= item.price %></p>
+            <p><strong>Rating:</strong> <%= item.rating %>/5</p>
+            <p><strong>Details:</strong> <%= item.details %></p>
+        </li>
     <% }); %>
-  </ul>
+</ul>
 </body>
 </html>
